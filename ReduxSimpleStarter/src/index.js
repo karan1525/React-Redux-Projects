@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import SearchBar from './components/search_bar';
+// need to provide actual path to a file you created yourself.
+// if library, don't need to do this.
+
+const API_KEY = 'AIzaSyAbBcmI0G6nNbPTNtnyF3QrLNl3GHKGIvI';
 
 //Comments are notes
 
@@ -17,7 +22,11 @@ import ReactDOM from 'react-dom';
 //ES6 syntax
 const App = () => {
   //JSX -> subset of JS that allows us to write HTML like JS
-  return <div>Hi!</div>;
+  return(
+   <div>
+  		<SearchBar />
+  </div>
+  );
 }
 
 //Valid JSX if empty tag -> <app />

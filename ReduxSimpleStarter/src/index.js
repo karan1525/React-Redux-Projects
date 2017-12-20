@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_details';
 // Only have the top level parent fetch all data
 
 // need to provide actual path to a file you created yourself.
@@ -50,11 +51,14 @@ class App extends Component{
   	return(
    	<div>
   			<SearchBar />
+  			<VideoDetail video= {this.state.videos[0]}/>
   			<VideoList  videos={this.state.videos} />
   	</div>
   	);
   }
 }
+
+//Props -> arguments -> video list will get the new list of videos
 
 //Valid JSX if empty tag -> <app />
 

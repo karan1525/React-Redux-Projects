@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-
+import YTSearch from 'youtube-api-search'
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
+// Only have the top level parent fetch all data
+
 // need to provide actual path to a file you created yourself.
 // if library, don't need to do this.
 
@@ -19,14 +22,38 @@ const API_KEY = 'AIzaSyAbBcmI0G6nNbPTNtnyF3QrLNl3GHKGIvI';
 
 //Rule -> 1 component per file
 
-//ES6 syntax
-const App = () => {
-  //JSX -> subset of JS that allows us to write HTML like JS
-  return(
-   <div>
-  		<SearchBar />
-  </div>
-  );
+//ES6 syntax (convert app to class based component)
+// const App = () => {
+//   //JSX -> subset of JS that allows us to write HTML like JS
+//   return(
+//    <div>
+//   		<SearchBar />
+//   </div>
+//   );
+// }
+
+class App extends Component{
+
+  constructor(props) {
+  	super(props);
+
+  	this.state = {videos: [] };
+
+
+	YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+		this.setState({ videos });
+		//this.setState( { videos: videos } ) //only if the key and property is the same
+	});
+  }
+
+  render () {
+  	return(
+   	<div>
+  			<SearchBar />
+  			<VideoList  videos={this.state.videos} />
+  	</div>
+  	);
+  }
 }
 
 //Valid JSX if empty tag -> <app />

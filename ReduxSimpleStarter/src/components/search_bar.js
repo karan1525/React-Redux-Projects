@@ -24,7 +24,7 @@ class SearchBar extends Component {
 		super(props); //have to call super always before
 		//Creation parameters -> props
 
-		this.state = {term: '' }; // term -> attribute of the state
+		this.state = {term: 'Starting Value' }; // term -> attribute of the state
 		// Update everytime the user enters information
 		// Only update state like this in the constructor. Otherwise, it's different
 		// Look below (this.setState )
@@ -47,10 +47,17 @@ class SearchBar extends Component {
 
 		//Change state only works in render function. Not in any other function
 
+		// <input onChange={(event) => this.setState({term: event.target.value})} />
+
+		//Value check with value = {this.state.term}
+
 		return (
 			<div>
-				<input onChange={(event) => this.setState({term: event.target.value})} />
-					<br />
+				 <input 
+				 	value = {this.state.term}
+				 	onChange={(event) => this.setState({term: event.target.value})} 
+				 />
+				<br />
 				Value of the input: {this.state.term}
 			</div>
 			);
@@ -69,6 +76,11 @@ class SearchBar extends Component {
 
 // Event handling
 // Event handler -> which element we need to monitor
+
+// Controlled forme element
+// State sets the value of the input
+// has it's value set by the state
+// when the state changes, the value will change
 
 //any file that needs SearchBar can now use it.
 export default SearchBar;

@@ -24,7 +24,7 @@ class SearchBar extends Component {
 		super(props); //have to call super always before
 		//Creation parameters -> props
 
-		this.state = {term: 'Starting Value' }; // term -> attribute of the state
+		this.state = {term: '' }; // term -> attribute of the state
 		// Update everytime the user enters information
 		// Only update state like this in the constructor. Otherwise, it's different
 		// Look below (this.setState )

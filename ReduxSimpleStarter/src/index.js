@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+//Comments are notes
+
 // Create a new component. This compement should produce some HTML
 
 //ES2016 syntax (similar to var but a constant)

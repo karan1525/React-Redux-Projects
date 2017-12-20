@@ -52,17 +52,22 @@ class SearchBar extends Component {
 		//Value check with value = {this.state.term}
 
 		return (
-			<div>
+			<div className="search-bar">
 				 <input 
 				 	value = {this.state.term}
-				 	onChange={(event) => this.setState({term: event.target.value})} 
+				 	onChange={event => this.onInputChangeListener(event.target.value)} 
 				 />
-				<br />
-				Value of the input: {this.state.term}
 			</div>
 			);
 		// return <input onChange={this.onInputChangedListener} />;
 		// Cannot change this.state in another function
+	}
+
+	onInputChangeListener(term) {
+
+		this.setState({term})
+		this.props.onSearchTermChange(term);
+
 	}
 
 	// onInputChangedListener(event) {

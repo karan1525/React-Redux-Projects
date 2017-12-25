@@ -1,2 +1,2 @@
 # ReactJS
-A repository for ReactJS, Redux, MiddleWare etc.
+A repository for ReactJS, Redux, MiddleWare, ReactRouter, ReduxForm, etc.

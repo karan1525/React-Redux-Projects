@@ -39,7 +39,7 @@ class PostsNew extends Component {
   }
 }
 
-//form: name of the form
+//form: name of the form (can be anything)
 export default reduxForm({
   form: 'PostsNewForm'
 })(PostsNew);

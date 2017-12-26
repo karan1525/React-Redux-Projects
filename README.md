@@ -1,4 +1,4 @@
-# ReactJS
+# React/ Redux Projects
 A repository for ReactJS, Redux, MiddleWare, ReactRouter, ReduxForm, etc.
 
 

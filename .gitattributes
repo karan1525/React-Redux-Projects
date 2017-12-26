@@ -1,2 +1,4 @@
-$ cat .gitattributes
-*.css linguist-language=css
+React/** linguist-vendored
+ReactRouterAndReduxForm/src/** linguist-vendored
+ReduxSimple/src/** linguist-vendored
+ReduxWeather/src/** linguist-vendored

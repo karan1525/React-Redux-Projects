@@ -2,6 +2,8 @@
 A repository for ReactJS, Redux, MiddleWare, ReactRouter, ReduxForm, etc.
 
 
-React JS            |  Redux
+React JS                   |  Redux
 :-------------------------:|:-------------------------:
-![alt text](http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png)  |  ![alt text](https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" width="350" height="256" title="Github Logo">  |  <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" width="350" height="300" title="Github Logo">
+React Router               |  Redux Form
+<img src="https://cdn.worldvectorlogo.com/logos/react-router.svg" width="350" height="256" title="Github Logo">  |  <img src="https://pbs.twimg.com/profile_images/658653282550857728/X9ayMtPe.jpg" width="256" height="256" title="Github Logo">

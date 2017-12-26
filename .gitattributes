@@ -1,4 +1,4 @@
-React/** linguist-vendored=false
-ReactRouterAndReduxForm/src/** linguist-vendored=false
-ReduxSimple/src/** linguist-vendored=false
-ReduxWeather/src/** linguist-vendored=false
+React/* linguist-vendored=false
+ReactRouterAndReduxForm/src/* linguist-vendored=false
+ReduxSimple/src/* linguist-vendored=false
+ReduxWeather/src/* linguist-vendored=false

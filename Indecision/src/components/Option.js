@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Option = props => {
+const Option = props => (
   <div className="option">
     <p className="option__text">
       {props.count}. {props.optionText}
@@ -12,7 +12,7 @@ const Option = props => {
       }}>
       remove
     </button>
-  </div>;
-};
+  </div>
+);
 
 export default Option;

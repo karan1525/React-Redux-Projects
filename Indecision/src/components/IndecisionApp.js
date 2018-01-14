@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/styles.css';
 import Header from './Header';
 
 export default class IndecisionApp extends Component {

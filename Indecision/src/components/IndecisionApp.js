@@ -25,6 +25,26 @@ export default class IndecisionApp extends Component {
     }));
   };
 
+  handlePick = () => {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    const option = this.state.options[randomNum];
+    this.setState(() => ({
+      selectedOption: option
+    }));
+  };
+
+  handleAddOption = option => {
+    if (!option) {
+      return 'Enter valid value to add item';
+    } else if (this.state.options.indexOf(option) > -1) {
+      return 'This option already exists';
+    }
+
+    this.setState(prevState => ({
+      options: prevState.options.concat(option)
+    }));
+  };
+
   render() {
     return (
       <div>

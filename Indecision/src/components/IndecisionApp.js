@@ -11,6 +11,30 @@ export default class IndecisionApp extends Component {
     selectedOption: undefined
   };
 
+  componentDidMount() {
+    try {
+      const json = localStorage.getItem('options');
+      const options = JSON.parse(json);
+
+      if (options) {
+        this.setState(() => ({ options }));
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.options.length !== this.state.options.length) {
+      const json = JSON.stringify(this.state.options);
+      localStorage.setItem('options', json);
+    }
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
   };
